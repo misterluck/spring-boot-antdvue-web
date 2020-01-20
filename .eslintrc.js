@@ -10,6 +10,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-useless-escape': 'off',
     'generator-star-spacing': 'off',
     'no-mixed-operators': 0,
     'vue/max-attributes-per-line': [
@@ -50,9 +51,9 @@ module.exports = {
     ],
     'no-delete-var': 2,
     'prefer-const': [
-      2,
+      0,
       {
-        'ignoreReadBeforeAssign': false
+        'ignoreReadBeforeAssign': true
       }
     ]
   },

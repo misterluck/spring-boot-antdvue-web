@@ -785,9 +785,9 @@ const userNav = (options) => {
       'component': 'Example'
     },
 
-    // monitor
+    // performance
     {
-      'name': 'monitor',
+      'name': 'performance',
       'parentId': 0,
       'id': 10037,
       'meta': {
@@ -795,12 +795,12 @@ const userNav = (options) => {
         'title': '性能监控',
         'permission': [ 'dashboard' ]
       },
-      'redirect': '/monitor/HttpTrace',
+      'redirect': '/performance/HttpTrace',
       'component': 'RouteView'
     },
     {
       'name': 'HttpTrace',
-      'path': '/monitor/HttpTrace',
+      'path': '/performance/HttpTrace',
       'parentId': 10037,
       'id': 10038,
       'meta': {
@@ -810,7 +810,7 @@ const userNav = (options) => {
     },
     {
       'name': 'JvmInfo',
-      'path': '/monitor/JvmInfo',
+      'path': '/performance/JvmInfo',
       'parentId': 10037,
       'id': 10039,
       'meta': {
@@ -820,7 +820,7 @@ const userNav = (options) => {
     },
     {
       'name': 'SystemInfo',
-      'path': '/monitor/SystemInfo',
+      'path': '/performance/SystemInfo',
       'parentId': 10037,
       'id': 10040,
       'meta': {
@@ -830,7 +830,7 @@ const userNav = (options) => {
     },
     {
       'name': 'TomcatInfo',
-      'path': '/monitor/TomcatInfo',
+      'path': '/performance/TomcatInfo',
       'parentId': 10037,
       'id': 10041,
       'meta': {
@@ -840,7 +840,7 @@ const userNav = (options) => {
     },
     {
       'name': 'DiskMonitoring',
-      'path': '/monitor/DiskMonitoring',
+      'path': '/performance/DiskMonitoring',
       'parentId': 10037,
       'id': 10042,
       'meta': {
@@ -850,7 +850,7 @@ const userNav = (options) => {
     },
     {
       'name': 'RedisInfo',
-      'path': '/monitor/RedisInfo',
+      'path': '/performance/RedisInfo',
       'parentId': 10037,
       'id': 10043,
       'meta': {
@@ -881,6 +881,16 @@ const userNav = (options) => {
         'title': '例子一'
       },
       'component': 'ExampleList'
+    },
+    {
+      'name': 'ExampleOrderList',
+      'path': '/modules/ExampleOrderList',
+      'parentId': 10044,
+      'id': 10045,
+      'meta': {
+        'title': '例子二'
+      },
+      'component': 'ExampleOrderList'
     }
 
   ]

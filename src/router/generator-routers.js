@@ -66,7 +66,8 @@ const constantRouterComponents = {
   'RedisInfo': () => import('@/views/monitor/RedisInfo'),
 
   // modules
-  'ExampleList': () => import('@/views/modules/example/ExampleList')
+  'ExampleList': () => import('@/views/modules/example/ExampleList'),
+  'ExampleOrderList': () => import('@/views/modules/order/ExampleOrderList')
 }
 
 // 前端未找到页面路由（固定不用改）
