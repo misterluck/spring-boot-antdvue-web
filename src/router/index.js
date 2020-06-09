@@ -16,4 +16,5 @@ export default new Router({
   base: process.env.BASE_URL,
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
+  // routes: constantRouterMap.concat(asyncRouterMap)
 })

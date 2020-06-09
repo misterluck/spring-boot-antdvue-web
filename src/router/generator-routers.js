@@ -52,6 +52,15 @@ const constantRouterComponents = {
   'BindingSettings': () => import('@/views/account/settings/Binding'),
   'NotificationSettings': () => import('@/views/account/settings/Notification'),
 
+  // 系统管理
+  // 'DictList': () => import('@/views/system/DictList'),
+  // 'SysPositionList': () => import('@/views/system/SysPositionList'),
+  'UserList': () => import('@/views/system/UserList'),
+  'RoleList': () => import('@/views/system/RoleList'),
+  'PermissionList': () => import('@/views/system/PermissionList'),
+  // 'DepartList': () => import('@/views/system/DepartList'),
+  // 'DepartUserList': () => import('@/views/system/DepartUserList'),
+
   'TestWork': () => import(/* webpackChunkName: "TestWork" */ '@/views/dashboard/TestWork'),
 
   // test

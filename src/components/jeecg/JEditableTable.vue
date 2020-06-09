@@ -724,6 +724,7 @@
 
 <script>
 import Vue from 'vue'
+import Draggable from 'vuedraggable'
 import { ACCESS_TOKEN } from '@/store/mutation-types'
 import { FormTypes, VALIDATE_NO_PASSED } from '@/utils/JEditableTableUtil'
 import { cloneObject, randomString } from '@/utils/util'
@@ -735,7 +736,7 @@ let rowHeight = 61
 
 export default {
   name: 'JEditableTable',
-  components: { JDate },
+  components: { JDate, Draggable },
   props: {
     // 列信息
     columns: {
@@ -1241,7 +1242,7 @@ export default {
       let maxNum = 0
       this.inputValues.forEach((item, index) => {
         let val = item[column.key]
-        let num = 0
+        let num
         try {
           num = parseInt(val)
         } catch {
@@ -1846,7 +1847,7 @@ export default {
       sort(this.inputValues)
 
       // 重置排序字段
-      this.inputValues.forEach((val, idx) => { val[this.dragSortKey] = (idx + 1) })
+      this.inputValues.forEach((val, idx) => (val[this.dragSortKey] = (idx + 1)))
 
       this.forceUpdateFormValues()
     },
@@ -1978,7 +1979,12 @@ export default {
     /** 将caseId去除 */
     removeCaseId (id) {
       let remove = id.split(this.caseId)[1]
-      return remove || id
+      // return remove ? remove : id
+      if (remove) {
+        return remove
+      } else {
+        return id
+      }
     },
 
     handleClickDelFile (id) {
