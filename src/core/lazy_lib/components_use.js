@@ -8,6 +8,8 @@
  */
 import Vue from 'vue'
 import {
+  Tree,
+  TreeSelect,
   LocaleProvider,
   Layout,
   Input,
@@ -50,6 +52,8 @@ import {
 } from 'ant-design-vue'
 // import VueCropper from 'vue-cropper'
 
+Vue.use(Tree)
+Vue.use(TreeSelect)
 Vue.use(LocaleProvider)
 Vue.use(Layout)
 Vue.use(Input)

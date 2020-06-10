@@ -30,7 +30,7 @@ export function getSmsCaptcha (parameter) {
 
 export function getInfo () {
   return axios({
-    url: '/user/info',
+    url: '/auth/userInfo',
     method: 'get',
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
@@ -40,7 +40,7 @@ export function getInfo () {
 
 export function getCurrentUserNav (token) {
   return axios({
-    url: '/user/nav',
+    url: '/auth/userMenu',
     method: 'get'
   })
 }

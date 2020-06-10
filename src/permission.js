@@ -22,7 +22,8 @@ router.beforeEach((to, from, next) => {
       next({ path: defaultRoutePath })
       NProgress.done()
     } else {
-      if (store.getters.roles.length === 0) {
+      // if (store.getters.roles.length === 0) {
+      if (store.getters.addRouters.length === 0) {
         store
           .dispatch('GetInfo')
           .then(res => {
@@ -32,6 +33,7 @@ router.beforeEach((to, from, next) => {
               // 动态添加可访问路由表
               router.addRoutes(store.getters.addRouters)
               const redirect = decodeURIComponent(from.query.redirect || to.path)
+              console.log('redirect', redirect)
               if (to.path === redirect) {
                 // hack方法 确保addRoutes已完成 ,set the replace: true so the navigation will not leave a history record
                 next({ ...to, replace: true })

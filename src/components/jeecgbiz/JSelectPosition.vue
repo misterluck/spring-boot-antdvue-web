@@ -11,13 +11,7 @@ import JSelectBizComponent from './JSelectBizComponent'
 export default {
   name: 'JSelectPosition',
   components: { JSelectBizComponent },
-  // props: ['value'],
-  props: {
-    value: {
-      type: String,
-      default: ''
-    }
-  },
+  props: ['value'],
   data () {
     return {
       settings: {
