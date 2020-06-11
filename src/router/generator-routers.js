@@ -53,7 +53,7 @@ const constantRouterComponents = {
   'NotificationSettings': () => import('@/views/account/settings/Notification'),
 
   // 系统管理
-  // 'DictList': () => import('@/views/system/DictList'),
+  'DictList': () => import('@/views/system/DictList'),
   // 'SysPositionList': () => import('@/views/system/SysPositionList'),
   'UserList': () => import('@/views/system/UserList'),
   'RoleList': () => import('@/views/system/RoleList'),
@@ -110,7 +110,7 @@ export const generatorDynamicRouter = (token) => {
       const menuNav = []
       const childrenNav = []
       // 后端数据, 根级树数组,  根级 PID
-      listToTree(result, childrenNav, '0')
+      listToTree(result, childrenNav, '')
       rootRouter.children = childrenNav
       menuNav.push(rootRouter)
       console.log('menuNav', menuNav)

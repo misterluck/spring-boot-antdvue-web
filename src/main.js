@@ -18,10 +18,15 @@ import './permission' // permission control
 import './utils/filter' // global filter
 import './components/global.less'
 
+import JDictSelectTag from './components/dict/index.js'
+import JeecgComponents from '@/components/jeecg/index'
+
 Vue.config.productionTip = false
 
 // mount axios Vue.$http and this.$http
 Vue.use(VueAxios)
+Vue.use(JDictSelectTag)
+Vue.use(JeecgComponents)
 
 new Vue({
   router,
